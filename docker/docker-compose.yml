@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres-payments
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: payments
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
