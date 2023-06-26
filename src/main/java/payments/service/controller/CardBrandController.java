@@ -29,7 +29,7 @@ public class CardBrandController {
 
     @PostMapping
     public ResponseEntity<?> insertUpdateCardBrand(@RequestBody CardBrand cardBrand){
-        CardBrand cardBrandResponse = cardBrandService.insertCardBrand(cardBrand);
+        CardBrand cardBrandResponse = cardBrandService.insertUpdateCardBrand(cardBrand);
         return ResponseEntity.ok().body(cardBrandResponse);
     }
 }
